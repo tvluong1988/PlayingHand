@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */; };
-		8BEFE0C81CC088EF00D65B89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C71CC088EF00D65B89 /* ViewController.swift */; };
 		8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C91CC088EF00D65B89 /* Main.storyboard */; };
 		8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */; };
 		8BEFE0D01CC088EF00D65B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CE1CC088EF00D65B89 /* LaunchScreen.storyboard */; };
 		8BEFE0DB1CC088EF00D65B89 /* PlayingHandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0DA1CC088EF00D65B89 /* PlayingHandTests.swift */; };
 		8BEFE0E61CC088EF00D65B89 /* PlayingHandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0E51CC088EF00D65B89 /* PlayingHandUITests.swift */; };
+		8BEFE0F41CC0891500D65B89 /* HandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0F31CC0891500D65B89 /* HandViewController.swift */; };
+		8BEFE0F61CC08D7100D65B89 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0F51CC08D7100D65B89 /* Hand.swift */; };
+		8BEFE0F81CC098F800D65B89 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0F71CC098F800D65B89 /* CardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		8BEFE0C21CC088EF00D65B89 /* PlayingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BEFE0C71CC088EF00D65B89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BEFE0CA1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BEFE0CF1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		8BEFE0E11CC088EF00D65B89 /* PlayingHandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayingHandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0E51CC088EF00D65B89 /* PlayingHandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingHandUITests.swift; sourceTree = "<group>"; };
 		8BEFE0E71CC088EF00D65B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEFE0F31CC0891500D65B89 /* HandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandViewController.swift; sourceTree = "<group>"; };
+		8BEFE0F51CC08D7100D65B89 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		8BEFE0F71CC098F800D65B89 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */,
-				8BEFE0C71CC088EF00D65B89 /* ViewController.swift */,
+				8BEFE0F31CC0891500D65B89 /* HandViewController.swift */,
+				8BEFE0F51CC08D7100D65B89 /* Hand.swift */,
+				8BEFE0F71CC098F800D65B89 /* CardCell.swift */,
 				8BEFE0C91CC088EF00D65B89 /* Main.storyboard */,
 				8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */,
 				8BEFE0CE1CC088EF00D65B89 /* LaunchScreen.storyboard */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEFE0C81CC088EF00D65B89 /* ViewController.swift in Sources */,
+				8BEFE0F41CC0891500D65B89 /* HandViewController.swift in Sources */,
 				8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */,
+				8BEFE0F61CC08D7100D65B89 /* Hand.swift in Sources */,
+				8BEFE0F81CC098F800D65B89 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
