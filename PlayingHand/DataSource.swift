@@ -12,25 +12,27 @@ class DataSource: NSObject, SourceType {
   
   // MARK: Functions
   func addItemTo(tableView: UITableView) {
-    if hand.numberOfCards < 52 {
-      hand = hand.addNewCardAtIndex(0)
+    if dataObject.numberOfItems < 52 {
+      dataObject = dataObject.addNewItemAtIndex(0)
       insertTopRowIn(tableView)
     }
   }
   
   // MARK: Properties
-  private var hand = Hand.newHand()
+  var dataObject: DataType = Hand()
+
 }
 
 extension DataSource: UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return hand.numberOfCards
+    return dataObject.numberOfItems
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath) as? CardCell else {
-      fatalError("Could not create CardCell")
+    guard let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath) as? CardCell,
+    hand = dataObject as? Hand else {
+      fatalError("Could not create CardCell or Hand instance")
     }
     
     cell.fillWith(hand[indexPath.row])
@@ -41,13 +43,13 @@ extension DataSource: UITableViewDataSource {
   
   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     if editingStyle == .Delete {
-      hand = hand.deleteCardAtIndex(indexPath.row)
+      dataObject = dataObject.deleteItemAtIndex(indexPath.row)
       deleteRowAtIndexPath(indexPath, fromTableView: tableView)
     }
   }
   
   func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-    hand = hand.moveCard(sourceIndexPath.row, toIndex:destinationIndexPath.row)
+    dataObject = dataObject.moveItem(sourceIndexPath.row, toIndex: destinationIndexPath.row)
   }
 }
 

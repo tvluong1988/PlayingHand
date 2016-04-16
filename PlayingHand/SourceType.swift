@@ -9,6 +9,8 @@
 import UIKit
 
 protocol SourceType: UITableViewDataSource {
+  var dataObject: DataType {get set}
+  
   func insertTopRowIn(tableView: UITableView)
   func deleteRowAtIndexPath(indexPath: NSIndexPath, fromTableView tableView: UITableView)
 }
