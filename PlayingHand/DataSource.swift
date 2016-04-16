@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataSource: NSObject {
+class DataSource: NSObject, SourceType {
   
   // MARK: Functions
   func addItemTo(tableView: UITableView) {
@@ -17,18 +17,6 @@ class DataSource: NSObject {
       insertTopRowIn(tableView)
     }
   }
-  
-  func insertTopRowIn(tableView: UITableView) {
-    tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
-    tableView.reloadData()
-    
-  }
-  
-  func deleteRowAtIndexPath(indexPath: NSIndexPath, fromTableView tableView: UITableView) {
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    tableView.reloadData()
-  }
-  
   
   // MARK: Properties
   private var hand = Hand.newHand()
