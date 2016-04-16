@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0815031CC2DFEA0006769F /* Set+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0815021CC2DFEA0006769F /* Set+.swift */; };
 		8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */; };
 		8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C91CC088EF00D65B89 /* Main.storyboard */; };
 		8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B0815021CC2DFEA0006769F /* Set+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+.swift"; sourceTree = "<group>"; };
 		8BEFE0C21CC088EF00D65B89 /* PlayingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BEFE0CA1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				8BEFE0F31CC0891500D65B89 /* HandViewController.swift */,
 				8BEFE0F51CC08D7100D65B89 /* Hand.swift */,
 				8BEFE0F71CC098F800D65B89 /* CardCell.swift */,
+				8B0815021CC2DFEA0006769F /* Set+.swift */,
 				8BEFE0C91CC088EF00D65B89 /* Main.storyboard */,
 				8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */,
 				8BEFE0CE1CC088EF00D65B89 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				8BEFE0F41CC0891500D65B89 /* HandViewController.swift in Sources */,
 				8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */,
+				8B0815031CC2DFEA0006769F /* Set+.swift in Sources */,
 				8BEFE0F61CC08D7100D65B89 /* Hand.swift in Sources */,
 				8BEFE0F81CC098F800D65B89 /* CardCell.swift in Sources */,
 			);
@@ -492,6 +496,7 @@
 				8BEFE0EC1CC088EF00D65B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEFE0ED1CC088EF00D65B89 /* Build configuration list for PBXNativeTarget "PlayingHandTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				8BEFE0EF1CC088EF00D65B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEFE0F01CC088EF00D65B89 /* Build configuration list for PBXNativeTarget "PlayingHandUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				8BEFE0F21CC088EF00D65B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

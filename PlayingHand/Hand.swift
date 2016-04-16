@@ -9,7 +9,7 @@
 import UIKit
 
 struct Card {
-
+  
   // MARK: Enums
   enum Suit: String, CustomStringConvertible {
     case Spades, Hearts, Diamonds, Clubs
@@ -67,57 +67,90 @@ func ==(lhs: Card, rhs: Card) -> Bool {
 struct Deck {
   
   // MARK: Functions
-  mutating func nextCard() -> Card? {
-    return cards.popFirst()
-  }
-  
-  // MARK: Lifecycle
-  init() {
-    cards = Set<Card>()
+  static func newDeck() -> Deck {
+    var allCards = Set<Card>()
     
     for suit in Card.Suit.allValues {
       for rank in Card.Rank.allValues {
         let card = Card(rank: rank, suit: suit)
-        cards.insert(card)
+        allCards.insert(card)
       }
     }
+    
+    return Deck(cards: allCards)
+  }
+  
+  
+  func nextCard() -> Card? {
+    return cards.randomElement()
+  }
+  
+  func removeCard(card: Card) -> Deck {
+    if cards.contains(card) {
+      var mutableCards = cards
+      mutableCards.remove(card)
+      
+      return Deck(cards: mutableCards)
+    }
+    
+    return self
   }
   
   // MARK: Properties
-  var cards: Set<Card>
-
+  let cards: Set<Card>
+  
 }
 
-class Hand {
+struct Hand {
+
+  // MARK: Static Functions
+  static func newHand() -> Hand {
+    let newDeck = Deck.newDeck()
+    let emptyCards = [Card]()
+    
+    return Hand(deck: newDeck, cards: emptyCards)
+  }
   
-  // MARK: Functions 
+  // MARK: Functions
   func cardAtIndex(index: Int) -> Card {
     return cards[index]
   }
   
-  func addNewCardAtIndex(index: Int) {
-    if let newCard = deck.nextCard() {
-      insertCard(newCard, atIndex: index)
+  func addNewCardAtIndex(index: Int) -> Hand {
+    
+    if let card = deck.nextCard() {
+      return insertCard(card, atIndex: index)
     }
+    
+    return self
+    
   }
   
-  func deleteCardAtIndex(index: Int) {
-    cards.removeAtIndex(index)
+  func deleteCardAtIndex(index: Int) -> Hand {
+    var mutableCards = cards
+    mutableCards.removeAtIndex(index)
+    
+    return Hand(deck: deck, cards: mutableCards)
   }
   
-  func moveCard(fromIndex: Int, toIndex: Int) {
-    let cardToMove = cards[fromIndex]
-    deleteCardAtIndex(fromIndex)
-    insertCard(cardToMove, atIndex: toIndex)
+  func moveCard(fromIndex: Int, toIndex: Int) -> Hand {
+    
+    return deleteCardAtIndex(fromIndex).insertCard(cards[fromIndex], atIndex: toIndex)
   }
   
-  private func insertCard(card: Card, atIndex index: Int) {
-    cards.insert(card, atIndex: index)
+  private func insertCard(card: Card, atIndex index: Int) -> Hand {
+    var mutableCards = cards
+    mutableCards.append(card)
+    
+    var mutableDeck = deck
+    mutableDeck = mutableDeck.removeCard(card)
+    
+    return Hand(deck: mutableDeck, cards: mutableCards)
   }
   
   // MARK: Properties
-  private var deck = Deck()
-  private var cards = [Card]()
+  private let deck: Deck
+  private let cards: [Card]
   
   var numberOfCards: Int {
     return cards.count

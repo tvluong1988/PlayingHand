@@ -12,8 +12,8 @@ class HandViewController: UITableViewController {
   
   // MARK: IBActions
   @IBAction func addNewCard(sender: UIBarButtonItem) {
-    if hand.numberOfCards < 5 {
-      hand.addNewCardAtIndex(0)
+    if hand.numberOfCards < 52 {
+      hand = hand.addNewCardAtIndex(0)
       insertTopRow()
     }
   
@@ -22,10 +22,13 @@ class HandViewController: UITableViewController {
   // MARK: Functions
   private func insertTopRow() {
     tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
+    tableView.reloadData()
+
   }
   
   private func deleteRowAtIndexPath(indexPath: NSIndexPath) {
     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    tableView.reloadData()
   }
   
   // MARK: Lifecycle
@@ -37,7 +40,7 @@ class HandViewController: UITableViewController {
   
 
   // MARK: Properties
-  private let hand = Hand()
+  private var hand = Hand.newHand()
   
 }
 
@@ -58,6 +61,7 @@ extension HandViewController {
     cell.textLabel?.text = card.rank.description
     cell.textLabel?.textColor = card.color
     cell.detailTextLabel?.text = card.suit.description
+    cell.detailTextLabel?.textColor = card.color
     
     return cell
     
@@ -65,13 +69,13 @@ extension HandViewController {
   
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     if editingStyle == .Delete {
-      hand.deleteCardAtIndex(indexPath.row)
+      hand = hand.deleteCardAtIndex(indexPath.row)
       deleteRowAtIndexPath(indexPath)
     }
   }
   
   override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-    hand.moveCard(sourceIndexPath.row, toIndex:destinationIndexPath.row)
+    hand = hand.moveCard(sourceIndexPath.row, toIndex:destinationIndexPath.row)
   }
 
 }
