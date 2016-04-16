@@ -55,14 +55,12 @@ extension HandViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath)
-    let card = hand.cardAtIndex(indexPath.row)
+    guard let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath) as? CardCell else {
+      fatalError("Could not create CardCell")
+    }
     
-    cell.textLabel?.text = card.rank.description
-    cell.textLabel?.textColor = card.color
-    cell.detailTextLabel?.text = card.suit.description
-    cell.detailTextLabel?.textColor = card.color
-    
+    cell.fillWith(hand[indexPath.row])
+
     return cell
     
   }

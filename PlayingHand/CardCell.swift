@@ -9,5 +9,11 @@
 import UIKit
 
 class CardCell: UITableViewCell {
-  
+  // MARK: Functions
+  func fillWith(card: Card) {
+    textLabel?.text = card.rank.description
+    textLabel?.textColor = card.color
+    detailTextLabel?.text = card.suit.description
+    detailTextLabel?.textColor = card.color
+  }
 }

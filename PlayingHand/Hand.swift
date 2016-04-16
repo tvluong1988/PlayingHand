@@ -157,6 +157,12 @@ struct Hand {
   }
 }
 
+extension Hand {
+  subscript(index: Int) -> Card {
+    return cards[index]
+  }
+}
+
 
 
 
