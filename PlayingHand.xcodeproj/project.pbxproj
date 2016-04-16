@@ -11,6 +11,7 @@
 		8B0815051CC2E59F0006769F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0815041CC2E59F0006769F /* DataSource.swift */; };
 		8B0815071CC2E8DD0006769F /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0815061CC2E8DD0006769F /* SourceType.swift */; };
 		8B0815091CC2EAD40006769F /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0815081CC2EAD40006769F /* DataType.swift */; };
+		8B08150B1CC2F4310006769F /* HandDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08150A1CC2F4310006769F /* HandDataSource.swift */; };
 		8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */; };
 		8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C91CC088EF00D65B89 /* Main.storyboard */; };
 		8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		8B0815041CC2E59F0006769F /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		8B0815061CC2E8DD0006769F /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		8B0815081CC2EAD40006769F /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		8B08150A1CC2F4310006769F /* HandDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandDataSource.swift; sourceTree = "<group>"; };
 		8BEFE0C21CC088EF00D65B89 /* PlayingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BEFE0CA1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */,
 				8BEFE0F31CC0891500D65B89 /* HandViewController.swift */,
 				8B0815041CC2E59F0006769F /* DataSource.swift */,
+				8B08150A1CC2F4310006769F /* HandDataSource.swift */,
 				8B0815061CC2E8DD0006769F /* SourceType.swift */,
 				8B0815081CC2EAD40006769F /* DataType.swift */,
 				8BEFE0F51CC08D7100D65B89 /* Hand.swift */,
@@ -277,6 +280,7 @@
 				8B0815051CC2E59F0006769F /* DataSource.swift in Sources */,
 				8BEFE0F41CC0891500D65B89 /* HandViewController.swift in Sources */,
 				8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */,
+				8B08150B1CC2F4310006769F /* HandDataSource.swift in Sources */,
 				8B0815071CC2E8DD0006769F /* SourceType.swift in Sources */,
 				8B0815031CC2DFEA0006769F /* Set+.swift in Sources */,
 				8B0815091CC2EAD40006769F /* DataType.swift in Sources */,

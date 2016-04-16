@@ -25,7 +25,7 @@ class HandViewController: UITableViewController {
   
 
   // MARK: Properties
-  private var dataSource = DataSource()
+  private var dataSource = HandDataSource()
 }
 
 

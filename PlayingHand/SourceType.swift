@@ -10,6 +10,7 @@ import UIKit
 
 protocol SourceType: UITableViewDataSource {
   var dataObject: DataType {get set}
+  var conditionForAdding: Bool {get}
   
   func insertTopRowIn(tableView: UITableView)
   func deleteRowAtIndexPath(indexPath: NSIndexPath, fromTableView tableView: UITableView)
@@ -26,6 +27,13 @@ extension SourceType {
   func deleteRowAtIndexPath(indexPath: NSIndexPath, fromTableView tableView: UITableView) {
     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
     tableView.reloadData()
+  }
+  
+  func addItemTo(tableView: UITableView) {
+    if conditionForAdding {
+      dataObject = dataObject.addNewItemAtIndex(0)
+      insertTopRowIn(tableView)
+    }
   }
 }
 

@@ -10,16 +10,16 @@ import UIKit
 
 class DataSource: NSObject, SourceType {
   
-  // MARK: Functions
-  func addItemTo(tableView: UITableView) {
-    if dataObject.numberOfItems < 52 {
-      dataObject = dataObject.addNewItemAtIndex(0)
-      insertTopRowIn(tableView)
-    }
+  // MARK: Lifecycle
+  init<A: DataType>(dataObject: A) {
+    self.dataObject = dataObject
   }
   
   // MARK: Properties
-  var dataObject: DataType = Hand()
+  var dataObject: DataType
+  var conditionForAdding: Bool {
+    return false
+  }
 
 }
 
@@ -30,15 +30,7 @@ extension DataSource: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath) as? CardCell,
-    hand = dataObject as? Hand else {
-      fatalError("Could not create CardCell or Hand instance")
-    }
-    
-    cell.fillWith(hand[indexPath.row])
-    
-    return cell
-    
+    fatalError("This method must be overriden.")
   }
   
   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
