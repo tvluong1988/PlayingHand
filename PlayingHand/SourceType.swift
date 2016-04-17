@@ -9,13 +9,16 @@
 import UIKit
 
 protocol SourceType: UITableViewDataSource {
+  // MARK: Properties
   var dataObject: DataType {get set}
   var conditionForAdding: Bool {get}
   
+  // MARK: Functions
   func insertTopRowIn(tableView: UITableView)
   func deleteRowAtIndexPath(indexPath: NSIndexPath, fromTableView tableView: UITableView)
 }
 
+// MARK: - Methods
 extension SourceType {
   
   func insertTopRowIn(tableView: UITableView) {
