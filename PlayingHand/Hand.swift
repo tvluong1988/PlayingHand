@@ -9,7 +9,7 @@
 import Foundation
 
 struct Hand {
-
+  
   // MARK: Static Functions
   static func newHand() -> Hand {
     let newDeck = Deck.newDeck()
@@ -20,8 +20,9 @@ struct Hand {
   
   // MARK: Functions
   private func insertCard(card: Card, atIndex index: Int) -> Hand {
+    
     var mutableCards = cards
-    mutableCards.append(card)
+    mutableCards.insert(card, atIndex: index)
     
     var mutableDeck = deck
     mutableDeck = mutableDeck.removeCard(card)
@@ -44,10 +45,6 @@ struct Hand {
   private let deck: Deck
   private let cards: [Card]
   
-  subscript(index: Int) -> Card {
-    return cards[index]
-  }
-  
 }
 
 // MARK: - DataType
@@ -55,6 +52,10 @@ extension Hand: DataType {
   
   var numberOfItems: Int {
     return cards.count
+  }
+  
+  subscript(index: Int) -> Card {
+    return cards[index]
   }
   
   func addNewItemAtIndex(index: Int) -> Hand {
@@ -66,6 +67,7 @@ extension Hand: DataType {
   }
   
   func deleteItemAtIndex(index: Int) -> Hand {
+
     var mutableCards = cards
     mutableCards.removeAtIndex(index)
     
@@ -73,7 +75,7 @@ extension Hand: DataType {
   }
   
   func moveItem(fromIndex: Int, toIndex: Int) -> Hand {
-  return deleteItemAtIndex(fromIndex).insertCard(cards[fromIndex], atIndex: toIndex)
+    return deleteItemAtIndex(fromIndex).insertCard(cards[fromIndex], atIndex: toIndex)
   }
 }
 

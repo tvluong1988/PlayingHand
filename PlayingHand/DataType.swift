@@ -17,3 +17,9 @@ protocol DataType {
   func deleteItemAtIndex(index: Int) -> Self
   func moveItem(fromIndex: Int, toIndex: Int) -> Self
 }
+
+extension DataType {
+  func addNewItem() -> Self {
+    return addNewItemAtIndex(0)
+  }
+}

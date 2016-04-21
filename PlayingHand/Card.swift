@@ -95,6 +95,7 @@ struct Deck {
   
   // MARK: Properties
   let cards: Set<Card>
+  static let maxNumberOfCards: Int = 52
   
 }
 

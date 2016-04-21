@@ -22,7 +22,7 @@ class HandDataSource: DataSource {
     return cell
   }
   
-  // MARK: Lifecycle 
+  // MARK: Lifecycle
   init() {
     super.init(dataObject: Hand())
   }

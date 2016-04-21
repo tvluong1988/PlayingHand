@@ -14,7 +14,7 @@ class HandViewController: UITableViewController {
   @IBAction func addNewCard(sender: UIBarButtonItem) {
     dataSource.addItemTo(tableView)
   }
-    
+  
   // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,7 +23,7 @@ class HandViewController: UITableViewController {
     self.navigationItem.leftBarButtonItem = self.editButtonItem()
   }
   
-
+  
   // MARK: Properties
   private var dataSource = HandDataSource()
 }

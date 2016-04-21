@@ -20,7 +20,7 @@ class DataSource: NSObject, SourceType {
   var conditionForAdding: Bool {
     return false
   }
-
+  
 }
 
 // MARK: - UITableViewDataSource
