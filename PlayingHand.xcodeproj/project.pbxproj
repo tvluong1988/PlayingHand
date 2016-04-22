@@ -15,6 +15,7 @@
 		8B08150D1CC2F68E0006769F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08150C1CC2F68E0006769F /* Card.swift */; };
 		8B334F6B1CC99D2600B2E754 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6A1CC99D2600B2E754 /* CardTests.swift */; };
 		8B334F6D1CC99EAB00B2E754 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6C1CC99EAB00B2E754 /* HandTests.swift */; };
+		8B334F751CC9A1EC00B2E754 /* HandDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */; };
 		8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */; };
 		8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C91CC088EF00D65B89 /* Main.storyboard */; };
 		8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		8B08150C1CC2F68E0006769F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8B334F6A1CC99D2600B2E754 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		8B334F6C1CC99EAB00B2E754 /* HandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
+		8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandDataSourceTests.swift; sourceTree = "<group>"; };
 		8BEFE0C21CC088EF00D65B89 /* PlayingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BEFE0CA1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B334F6E1CC9A00700B2E754 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B0815021CC2DFEA0006769F /* Set+.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8B334F6F1CC9A02C00B2E754 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BEFE0F31CC0891500D65B89 /* HandViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8B334F701CC9A03D00B2E754 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */,
+				8BEFE0C91CC088EF00D65B89 /* Main.storyboard */,
+				8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */,
+				8BEFE0CE1CC088EF00D65B89 /* LaunchScreen.storyboard */,
+				8BEFE0D11CC088EF00D65B89 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		8B334F711CC9A05200B2E754 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8B0815061CC2E8DD0006769F /* SourceType.swift */,
+				8B0815041CC2E59F0006769F /* DataSource.swift */,
+				8B08150A1CC2F4310006769F /* HandDataSource.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		8B334F721CC9A06D00B2E754 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BEFE0F71CC098F800D65B89 /* CardCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8B334F731CC9A08000B2E754 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B0815081CC2EAD40006769F /* DataType.swift */,
+				8BEFE0F51CC08D7100D65B89 /* Hand.swift */,
+				8B08150C1CC2F68E0006769F /* Card.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8BEFE0B91CC088EE00D65B89 = {
 			isa = PBXGroup;
 			children = (
@@ -117,20 +175,12 @@
 		8BEFE0C41CC088EF00D65B89 /* PlayingHand */ = {
 			isa = PBXGroup;
 			children = (
-				8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */,
-				8BEFE0F31CC0891500D65B89 /* HandViewController.swift */,
-				8B0815041CC2E59F0006769F /* DataSource.swift */,
-				8B08150A1CC2F4310006769F /* HandDataSource.swift */,
-				8B0815061CC2E8DD0006769F /* SourceType.swift */,
-				8B0815081CC2EAD40006769F /* DataType.swift */,
-				8BEFE0F51CC08D7100D65B89 /* Hand.swift */,
-				8BEFE0F71CC098F800D65B89 /* CardCell.swift */,
-				8B08150C1CC2F68E0006769F /* Card.swift */,
-				8B0815021CC2DFEA0006769F /* Set+.swift */,
-				8BEFE0C91CC088EF00D65B89 /* Main.storyboard */,
-				8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */,
-				8BEFE0CE1CC088EF00D65B89 /* LaunchScreen.storyboard */,
-				8BEFE0D11CC088EF00D65B89 /* Info.plist */,
+				8B334F701CC9A03D00B2E754 /* Support */,
+				8B334F6F1CC9A02C00B2E754 /* Controllers */,
+				8B334F711CC9A05200B2E754 /* DataSource */,
+				8B334F731CC9A08000B2E754 /* Models */,
+				8B334F721CC9A06D00B2E754 /* Views */,
+				8B334F6E1CC9A00700B2E754 /* Extensions */,
 			);
 			path = PlayingHand;
 			sourceTree = "<group>";
@@ -138,6 +188,7 @@
 		8BEFE0D91CC088EF00D65B89 /* PlayingHandTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */,
 				8B334F6C1CC99EAB00B2E754 /* HandTests.swift */,
 				8B334F6A1CC99D2600B2E754 /* CardTests.swift */,
 				8BEFE0DA1CC088EF00D65B89 /* PlayingHandTests.swift */,
@@ -304,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B334F6D1CC99EAB00B2E754 /* HandTests.swift in Sources */,
+				8B334F751CC9A1EC00B2E754 /* HandDataSourceTests.swift in Sources */,
 				8B334F6B1CC99D2600B2E754 /* CardTests.swift in Sources */,
 				8BEFE0DB1CC088EF00D65B89 /* PlayingHandTests.swift in Sources */,
 			);

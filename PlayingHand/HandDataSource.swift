@@ -29,8 +29,8 @@ class HandDataSource: DataSource {
   
   // MARK: Properties
   override var conditionForAdding: Bool {
-    return dataObject.numberOfItems < 5
+    return dataObject.numberOfItems < dataObjectMaxNumberOfItems
   }
   
-  
+  let dataObjectMaxNumberOfItems = 5
 }

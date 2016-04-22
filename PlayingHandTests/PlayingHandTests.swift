@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import GameplayKit
 @testable import PlayingHand
 
 class PlayingHandTests: XCTestCase {
