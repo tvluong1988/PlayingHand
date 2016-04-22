@@ -11,7 +11,7 @@ import XCTest
 
 class HandDataSourceTests: XCTestCase {
   // MARK: Tests
-  func testHandDataSourceConditionForAddingPass() {
+  func testConditionForAddingPass() {
     for _ in 1...(handDataSource.dataObjectMaxNumberOfItems - 1) {
       handDataSource.dataObject.addNewItem()
     }
@@ -19,7 +19,7 @@ class HandDataSourceTests: XCTestCase {
     XCTAssert(handDataSource.conditionForAdding == true)
   }
   
-  func testHandDataSourceInit() {
+  func testInit() {
     var handDataSource: HandDataSource?
     
     handDataSource = HandDataSource()

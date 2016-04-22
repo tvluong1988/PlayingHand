@@ -13,7 +13,7 @@ import GameplayKit
 class HandTests: XCTestCase {
   
   // MARK: Tests
-  func testHandMoveItem() {
+  func testMoveItem() {
     for _ in 1...Deck.maxNumberOfCards {
       hand = hand.addNewItem()
     }
@@ -38,7 +38,7 @@ class HandTests: XCTestCase {
     
   }
   
-  func testHandDeleteItemAtIndexMultipleTimes() {
+  func testDeleteItemAtIndexMultipleTimes() {
     for _ in 1...Deck.maxNumberOfCards {
       hand = hand.addNewItem()
     }
@@ -49,14 +49,14 @@ class HandTests: XCTestCase {
     }
   }
   
-  func testHandAddNewItemMultipleTimes() {
+  func testAddNewItemMultipleTimes() {
     for _ in 1...(Deck.maxNumberOfCards + 10) {
       hand = hand.addNewItem()
       XCTAssert(hand.numberOfItems <= Deck.maxNumberOfCards)
     }
   }
   
-  func testHandNewHand() {
+  func testNewHand() {
     var hand: Hand?
     
     hand = Hand.newHand()
@@ -65,7 +65,7 @@ class HandTests: XCTestCase {
     XCTAssert(hand?.numberOfItems == 0)
   }
   
-  func testHandEmptyInit() {
+  func testInit() {
     var hand: Hand?
     
     hand = Hand()

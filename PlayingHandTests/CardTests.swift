@@ -11,12 +11,12 @@ import XCTest
 
 class CardTests: XCTestCase {
   // MARK: Tests
-  func testDeckNewDeck() {
+  func testNewDeck() {
     let deck = Deck.newDeck()
     XCTAssert(deck.cards.count == Deck.maxNumberOfCards)
   }
   
-  func testDeckNextCardUntilEmptyDeck() {
+  func testNextCardUntilEmptyDeck() {
     var deck = Deck.newDeck()
     
     for _ in 1...Deck.maxNumberOfCards {
@@ -29,7 +29,7 @@ class CardTests: XCTestCase {
     
   }
   
-  func testCardInit() {
+  func testInit() {
     var card: Card?
     
     card = Card(rank: .Ace, suit: .Clubs)
@@ -37,7 +37,7 @@ class CardTests: XCTestCase {
     XCTAssert(card != nil)
   }
   
-  func testCardEquatable() {
+  func testEquatable() {
     let aceOfSpades = Card(rank: .Ace, suit: .Spades)
     let aceOfSpadesCopy = Card(rank: .Ace, suit: .Spades)
     let kingOfDiamonds = Card(rank: .King, suit: .Diamonds)

@@ -20,7 +20,9 @@ class HandViewController: UITableViewController {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
-    self.navigationItem.leftBarButtonItem = self.editButtonItem()
+    navigationItem.leftBarButtonItem = editButtonItem()
+    
+    title = "Playing Hand"
   }
   
   
