@@ -21,12 +21,27 @@ class PlayingHandUITests: XCTestCase {
     let predicate = NSPredicate(format: "count == \(count)")
     
     expectationForPredicate(predicate, evaluatedWithObject: cells, handler: nil)
-    waitForExpectationsWithTimeout(5, handler: nil)
+    waitForExpectationsWithTimeout(3, handler: nil)
   }
   
   // MARK: Tests
+  func testMoveBottomCardToTopPosition() {
+    addCardsToHand(maxNumberOfCardsInHand)
+    editButton.tap()
+    
+    let cells = app.tables.cells
+    let topCell = cells.elementBoundByIndex(0)
+    let bottomCell = cells.elementBoundByIndex(cells.count - 1)
+    
+    let reorderButton = bottomCell.buttons.elementBoundByIndex(1)
+    
+    reorderButton.pressForDuration(1, thenDragToElement: topCell)
+    
+    doneButton.tap()
+  }
+  
   func testMoveTopCardToBottomPosition() {
-    addCardsToHand(5)
+    addCardsToHand(maxNumberOfCardsInHand)
     editButton.tap()
     
     let cells = app.tables.cells
@@ -35,16 +50,11 @@ class PlayingHandUITests: XCTestCase {
 
     let reorderButton = topCell.buttons.elementBoundByIndex(1)
     
-//    print("TopCell before move: \(topCell.debugDescription)")
-    
     reorderButton.pressForDuration(1, thenDragToElement: bottomCell)
-    
-//    print("TopCell after move: \(topCell.debugDescription)")
-
   }
   
   func testDeleteMultipleCard() {
-    addCardsToHand(5)
+    addCardsToHand(maxNumberOfCardsInHand)
     
     let cells = app.tables.cells
     
@@ -89,7 +99,7 @@ class PlayingHandUITests: XCTestCase {
   func testEditButtonTapAddButtonMultipleTaps() {
     editButton.tap()
     
-    addCardsToHand(5)
+    addCardsToHand(maxNumberOfCardsInHand)
     
     let cells = app.tables.cells
     
@@ -111,7 +121,7 @@ class PlayingHandUITests: XCTestCase {
   }
   
   func testAddButtonMultipleTaps() {
-    addCardsToHand(5)
+    addCardsToHand(maxNumberOfCardsInHand)
     
     let cells = app.tables.cells
     
@@ -160,8 +170,8 @@ class PlayingHandUITests: XCTestCase {
   
   // MARK: Properties
   let app = XCUIApplication()
-  lazy var addButton: XCUIElement = self.app.navigationBars["Playing Hand"].buttons["Add"]
-  lazy var editButton: XCUIElement = self.app.navigationBars["Playing Hand"].buttons["Edit"]
-  lazy var doneButton: XCUIElement = self.app.navigationBars["Playing Hand"].buttons["Done"]
-  
+  lazy var addButton: XCUIElement = {return self.app.navigationBars["Playing Hand"].buttons["Add"]}()
+  lazy var editButton: XCUIElement = {return self.app.navigationBars["Playing Hand"].buttons["Edit"]}()
+  lazy var doneButton: XCUIElement = {return self.app.navigationBars["Playing Hand"].buttons["Done"]}()
+  let maxNumberOfCardsInHand = 5
 }

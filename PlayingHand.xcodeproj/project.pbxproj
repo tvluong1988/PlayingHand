@@ -16,6 +16,9 @@
 		8B334F6B1CC99D2600B2E754 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6A1CC99D2600B2E754 /* CardTests.swift */; };
 		8B334F6D1CC99EAB00B2E754 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6C1CC99EAB00B2E754 /* HandTests.swift */; };
 		8B334F751CC9A1EC00B2E754 /* HandDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */; };
+		8B6E737C1CCEA1B500DA42AA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E737B1CCEA1B500DA42AA /* README.md */; };
+		8B6E737F1CCEA24300DA42AA /* PlayingHandDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */; };
+		8B6E73801CCEA24300DA42AA /* PlayingHandTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */; };
 		8BEFE0C61CC088EF00D65B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */; };
 		8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0C91CC088EF00D65B89 /* Main.storyboard */; };
 		8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFE0CC1CC088EF00D65B89 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		8B334F6A1CC99D2600B2E754 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		8B334F6C1CC99EAB00B2E754 /* HandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
 		8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandDataSourceTests.swift; sourceTree = "<group>"; };
+		8B6E737B1CCEA1B500DA42AA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PlayingHandDemo.gif; sourceTree = "<group>"; };
+		8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayingHandTestResults.png; sourceTree = "<group>"; };
 		8BEFE0C21CC088EF00D65B89 /* PlayingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEFE0C51CC088EF00D65B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BEFE0CA1CC088EF00D65B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 		8BEFE0B91CC088EE00D65B89 = {
 			isa = PBXGroup;
 			children = (
+				8B6E737B1CCEA1B500DA42AA /* README.md */,
+				8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */,
+				8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */,
 				8BEFE0C41CC088EF00D65B89 /* PlayingHand */,
 				8BEFE0D91CC088EF00D65B89 /* PlayingHandTests */,
 				8BEFE0E41CC088EF00D65B89 /* PlayingHandUITests */,
@@ -310,9 +319,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6E73801CCEA24300DA42AA /* PlayingHandTestResults.png in Resources */,
 				8BEFE0D01CC088EF00D65B89 /* LaunchScreen.storyboard in Resources */,
 				8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */,
 				8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */,
+				8B6E737F1CCEA24300DA42AA /* PlayingHandDemo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +357,7 @@
 				8B0815091CC2EAD40006769F /* DataType.swift in Sources */,
 				8B08150D1CC2F68E0006769F /* Card.swift in Sources */,
 				8BEFE0F61CC08D7100D65B89 /* Hand.swift in Sources */,
+				8B6E737C1CCEA1B500DA42AA /* README.md in Sources */,
 				8BEFE0F81CC098F800D65B89 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
