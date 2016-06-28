@@ -67,7 +67,7 @@ extension Hand: DataType {
   }
   
   func deleteItemAtIndex(index: Int) -> Hand {
-
+    
     var mutableCards = cards
     mutableCards.removeAtIndex(index)
     

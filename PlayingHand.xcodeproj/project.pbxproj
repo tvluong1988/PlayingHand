@@ -16,6 +16,7 @@
 		8B334F6B1CC99D2600B2E754 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6A1CC99D2600B2E754 /* CardTests.swift */; };
 		8B334F6D1CC99EAB00B2E754 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6C1CC99EAB00B2E754 /* HandTests.swift */; };
 		8B334F751CC9A1EC00B2E754 /* HandDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */; };
+		8B4AC5961D221E85005EC7A1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AC5951D221E85005EC7A1 /* .travis.yml */; };
 		8B6E737C1CCEA1B500DA42AA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E737B1CCEA1B500DA42AA /* README.md */; };
 		8B6E737F1CCEA24300DA42AA /* PlayingHandDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */; };
 		8B6E73801CCEA24300DA42AA /* PlayingHandTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */; };
@@ -57,6 +58,7 @@
 		8B334F6A1CC99D2600B2E754 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		8B334F6C1CC99EAB00B2E754 /* HandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
 		8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandDataSourceTests.swift; sourceTree = "<group>"; };
+		8B4AC5951D221E85005EC7A1 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8B6E737B1CCEA1B500DA42AA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PlayingHandDemo.gif; sourceTree = "<group>"; };
 		8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayingHandTestResults.png; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6E737B1CCEA1B500DA42AA /* README.md */,
+				8B4AC5951D221E85005EC7A1 /* .travis.yml */,
 				8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */,
 				8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */,
 				8BEFE0C41CC088EF00D65B89 /* PlayingHand */,
@@ -319,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4AC5961D221E85005EC7A1 /* .travis.yml in Resources */,
 				8B6E73801CCEA24300DA42AA /* PlayingHandTestResults.png in Resources */,
 				8BEFE0D01CC088EF00D65B89 /* LaunchScreen.storyboard in Resources */,
 				8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */,
