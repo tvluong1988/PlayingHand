@@ -1,0 +1,30 @@
+default_platform :ios
+
+platform :ios do
+#before_all do
+#cocoapods
+#end
+
+desc "Run tests"
+lane :test do
+scan(
+scheme: "PlayingHand",
+project: "PlayingHand.xcodeproj",
+clean: true,
+code_coverage: true,
+skip_slack: true,
+sdk: "iphonesimulator9.3"
+)
+end
+
+desc "Calculate test code coverage score. Need to run test beforehand."
+lane :report_test_coverage do
+xcov(
+project: "PlayingHand.xcodeproj",
+scheme: "PlayingHand",
+output_directory: "xcov_output"
+)
+end
+
+
+end

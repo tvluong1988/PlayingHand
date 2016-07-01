@@ -16,6 +16,9 @@
 		8B334F6B1CC99D2600B2E754 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6A1CC99D2600B2E754 /* CardTests.swift */; };
 		8B334F6D1CC99EAB00B2E754 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F6C1CC99EAB00B2E754 /* HandTests.swift */; };
 		8B334F751CC9A1EC00B2E754 /* HandDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */; };
+		8B46112E1D25F452000880A7 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B46112D1D25F452000880A7 /* Fastfile */; };
+		8B4611311D25F4AA000880A7 /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611301D25F4AA000880A7 /* script.sh */; };
+		8B4611331D25F4BF000880A7 /* after_success_script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611321D25F4BF000880A7 /* after_success_script.sh */; };
 		8B4AC5961D221E85005EC7A1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AC5951D221E85005EC7A1 /* .travis.yml */; };
 		8B6E737C1CCEA1B500DA42AA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E737B1CCEA1B500DA42AA /* README.md */; };
 		8B6E737F1CCEA24300DA42AA /* PlayingHandDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */; };
@@ -58,6 +61,9 @@
 		8B334F6A1CC99D2600B2E754 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		8B334F6C1CC99EAB00B2E754 /* HandTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
 		8B334F741CC9A1EC00B2E754 /* HandDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandDataSourceTests.swift; sourceTree = "<group>"; };
+		8B46112D1D25F452000880A7 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
+		8B4611301D25F4AA000880A7 /* script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = script.sh; path = travis/script.sh; sourceTree = "<group>"; };
+		8B4611321D25F4BF000880A7 /* after_success_script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = after_success_script.sh; path = travis/after_success_script.sh; sourceTree = "<group>"; };
 		8B4AC5951D221E85005EC7A1 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8B6E737B1CCEA1B500DA42AA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PlayingHandDemo.gif; sourceTree = "<group>"; };
@@ -160,10 +166,29 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		8B46112F1D25F491000880A7 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				8B46112D1D25F452000880A7 /* Fastfile */,
+			);
+			name = fastlane;
+			sourceTree = "<group>";
+		};
+		8B4611341D25F4CD000880A7 /* travis */ = {
+			isa = PBXGroup;
+			children = (
+				8B4611301D25F4AA000880A7 /* script.sh */,
+				8B4611321D25F4BF000880A7 /* after_success_script.sh */,
+			);
+			name = travis;
+			sourceTree = "<group>";
+		};
 		8BEFE0B91CC088EE00D65B89 = {
 			isa = PBXGroup;
 			children = (
 				8B6E737B1CCEA1B500DA42AA /* README.md */,
+				8B4611341D25F4CD000880A7 /* travis */,
+				8B46112F1D25F491000880A7 /* fastlane */,
 				8B4AC5951D221E85005EC7A1 /* .travis.yml */,
 				8B6E737D1CCEA24300DA42AA /* PlayingHandDemo.gif */,
 				8B6E737E1CCEA24300DA42AA /* PlayingHandTestResults.png */,
@@ -322,12 +347,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4611331D25F4BF000880A7 /* after_success_script.sh in Resources */,
 				8B4AC5961D221E85005EC7A1 /* .travis.yml in Resources */,
+				8B46112E1D25F452000880A7 /* Fastfile in Resources */,
 				8B6E73801CCEA24300DA42AA /* PlayingHandTestResults.png in Resources */,
 				8BEFE0D01CC088EF00D65B89 /* LaunchScreen.storyboard in Resources */,
 				8BEFE0CD1CC088EF00D65B89 /* Assets.xcassets in Resources */,
 				8BEFE0CB1CC088EF00D65B89 /* Main.storyboard in Resources */,
 				8B6E737F1CCEA24300DA42AA /* PlayingHandDemo.gif in Resources */,
+				8B4611311D25F4AA000880A7 /* script.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
